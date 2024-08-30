@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flow Meter Data</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add CSS here for simplicity */
+        .iframe-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Adds space between the iframes */
+        }
+        .iframe-container iframe {
+            flex: 1 1 calc(50% - 20px); /* Adjusts the width of the iframes */
+            box-sizing: border-box; /* Ensures padding and border are included in the width */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Flow Meter Data</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="water-level.html">Water Level Monitoring</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Live Flow Meter Data</h2>
+            <div class="iframe-container">
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2499086/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2499086/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2499086/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2499086/charts/4?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Water Monitoring Project.</p>
+    </footer>
+</body>
+</html>

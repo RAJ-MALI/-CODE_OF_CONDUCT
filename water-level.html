@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Level Monitoring</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add CSS here for simplicity */
+        .iframe-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* Adds space between the iframes */
+        }
+        .iframe-container iframe {
+            flex: 1 1 calc(50% - 20px); /* Adjusts the width of the iframes */
+            box-sizing: border-box; /* Ensures padding and border are included in the width */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Water Level Monitoring</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="flow-meter.html">Flow Meter Data</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Live Water Level Data</h2>
+            <div class="iframe-container">
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2518921/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&yaxismax=15&yaxismin=0"></iframe>
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2518921/widgets/851362"></iframe>
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2518921/widgets/851360"></iframe>
+                <iframe width="450" height="260" style="border: 1px solid #cccccc;" src="https://thingspeak.com/channels/2518921/widgets/851361"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Water Monitoring Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>
